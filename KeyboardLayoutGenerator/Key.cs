@@ -74,30 +74,18 @@ namespace KeyboardLayoutGenerator
             this._topLeft = "";
             this._topCenter = "";
             this._topRight = "";
-            this._colorTopLeft = Color.FromArgb(0, 0, 0);
-            this._colorTopCenter = Color.FromArgb(0, 0, 0);
-            this._colorTopRight = Color.FromArgb(0, 0, 0);
 
             this._centerLeft = "";
             this._centerCenter = "";
             this._centerRight = "";
-            this._colorCenterLeft = Color.FromArgb(0, 0, 0);
-            this._colorCenterCenter = Color.FromArgb(0, 0, 0);
-            this._colorCenterRight = Color.FromArgb(0, 0, 0);
 
             this._bottomLeft = "";
             this._bottomCenter = "";
             this._bottomRight = "";
-            this._colorBottomLeft = Color.FromArgb(0, 0, 0);
-            this._colorBottomCenter = Color.FromArgb(0, 0, 0);
-            this._colorBottomRight = Color.FromArgb(0, 0, 0);
 
             this._frontLeft = "";
             this._frontCenter = "";
             this._frontRight = "";
-            this._colorFrontLeft = Color.FromArgb(0, 0, 0);
-            this._colorFrontCenter = Color.FromArgb(0, 0, 0);
-            this._colorFrontRight = Color.FromArgb(0, 0, 0);
         }
 
         public double Size
