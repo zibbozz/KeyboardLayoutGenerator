@@ -69,5 +69,48 @@ namespace KeyboardLayoutGenerator
                 this._author = value;
             }
         }
+
+        /// <summary>
+        /// Adds a key to the keyboard layout.
+        /// </summary>
+        /// <param name="key">The key that will be added</param>
+        public void AddKey(Key key)
+        {
+            this._keys.Add(key);
+        }
+
+        /// <summary>
+        /// Get all keys on the keyboard.
+        /// </summary>
+        /// <returns></returns>
+        public Key[] GetKeys()
+        {
+            Key[] keys = new Key[this._keys.Count];
+            for(int i = 0; i < keys.Length; i++)
+            {
+                keys[i] = this._keys[i];
+            }
+            return keys;
+        }
+
+        /// <summary>
+        /// Get a specific key on the keyboard.
+        /// </summary>
+        /// <param name="index">The index of the wanted key</param>
+        /// <returns></returns>
+        public Key GetKey(int index)
+        {
+            if(index >= 0)
+            {
+                if (index < this._keys.Count)
+                    return this._keys[index];
+                else
+                    throw new Exception("Index is higher than the count of keys.");
+            }
+            else
+            {
+                throw new Exception("Index can not be negative.");
+            }
+        }
     }
 }
