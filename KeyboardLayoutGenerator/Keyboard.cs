@@ -24,5 +24,50 @@ namespace KeyboardLayoutGenerator
             this._title = "";
             this._author = "";
         }
+
+        /// <summary>
+        /// Sets the background color of the keyboard.
+        /// </summary>
+        public Color BackgroundColor
+        {
+            get
+            {
+                return this._backgroundColor;
+            }
+            set
+            {
+                this._backgroundColor = value;
+            }
+        }
+
+        /// <summary>
+        /// Sets the title of the keyboard layout.
+        /// </summary>
+        public string Title
+        {
+            get
+            {
+                return this._title;
+            }
+            set
+            {
+                this._title = value;
+            }
+        }
+
+        /// <summary>
+        /// Sets the author of the keyboard layout.
+        /// </summary>
+        public string Author
+        {
+            get
+            {
+                return this._author;
+            }
+            set
+            {
+                this._author = value;
+            }
+        }
     }
 }
