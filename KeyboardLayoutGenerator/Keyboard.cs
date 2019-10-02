@@ -13,5 +13,16 @@ namespace KeyboardLayoutGenerator
         private Color _backgroundColor;
         private string _title;
         private string _author;
+
+        /// <summary>
+        /// Constructs a standard keyboard without any keys and default parameters.
+        /// </summary>
+        public Keyboard()
+        {
+            this._keys = new List<Key>();
+            this._backgroundColor = Color.FromArgb(140, 140, 140);
+            this._title = "";
+            this._author = "";
+        }
     }
 }
