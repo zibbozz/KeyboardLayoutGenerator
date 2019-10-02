@@ -54,6 +54,9 @@ namespace KeyboardLayoutGenerator
         private Color _colorFrontCenter;
         private Color _colorFrontRight;
 
+        /// <summary>
+        /// Constructs a standard key with all default parameters.
+        /// </summary>
         public Key()
         {
             this._size = 3.0;
@@ -88,6 +91,11 @@ namespace KeyboardLayoutGenerator
             this._frontRight = "";
         }
 
+        /// <summary>
+        /// Sets the size of all captions.
+        /// Minimum = 1.0
+        /// Default = 3.0
+        /// </summary>
         public double Size
         {
             get
@@ -100,6 +108,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of all captions that do not have a unique color set.
+        /// </summary>
         public Color Color
         {
             get
@@ -112,6 +123,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the key.
+        /// </summary>
         public Color KeyColor
         {
             get
@@ -124,6 +138,11 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the width of the key.
+        /// Minimum = 1.0
+        /// Default = 1.0
+        /// </summary>
         public double Width
         {
             get
@@ -136,6 +155,11 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the height of the key.
+        /// Minimum = 1.0
+        /// Default = 1.0
+        /// </summary>
         public double Height
         {
             get
@@ -148,6 +172,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the second width of the key. Is used to create non rectangular keys.
+        /// </summary>
         public double Width2
         {
             get
@@ -160,6 +187,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the second height of the key. Is used to create non rectangular keys.
+        /// </summary>
         public double Height2
         {
             get
@@ -172,6 +202,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the x coordinate of the key.
+        /// </summary>
         public double X
         {
             get
@@ -184,6 +217,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the y coordinate of the key.
+        /// </summary>
         public double Y
         {
             get
@@ -196,6 +232,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the second x coordinaate of the key. Is used to create non rectangular keys.
+        /// </summary>
         public double X2
         {
             get
@@ -208,6 +247,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the second y coordinaate of the key. Is used to create non rectangular keys.
+        /// </summary>
         public double Y2
         {
             get
@@ -220,6 +262,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets if the first part of the key is raised higher than the rest of the key.
+        /// </summary>
         public bool Stepped
         {
             get
@@ -232,6 +277,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets if the key gets a bump on the bottom part of the key.
+        /// </summary>
         public bool Homing
         {
             get
@@ -244,6 +292,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the upper left caption of the key.
+        /// </summary>
         public string CaptionTopLeft
         {
             get
@@ -256,6 +307,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the upper center caption of the key.
+        /// </summary>
         public string CaptionTopCenter
         {
             get
@@ -268,6 +322,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the upper right caption of the key.
+        /// </summary>
         public string CaptionTopRight
         {
             get
@@ -280,6 +337,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the upper left caption of the key.
+        /// </summary>
         public Color ColorTopLeft
         {
             get
@@ -292,6 +352,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the upper center caption of the key.
+        /// </summary>
         public Color ColorTopCenter
         {
             get
@@ -304,6 +367,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the upper right caption of the key.
+        /// </summary>
         public Color ColorTopRight
         {
             get
@@ -316,6 +382,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the left caption of the key.
+        /// </summary>
         public string CaptionCenterLeft
         {
             get
@@ -328,6 +397,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the center caption of the key.
+        /// </summary>
         public string CaptionCenterCenter
         {
             get
@@ -340,6 +412,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the right caption of the key.
+        /// </summary>
         public string CaptionCenterRight
         {
             get
@@ -352,6 +427,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the left caption of the key.
+        /// </summary>
         public Color ColorCenterLeft
         {
             get
@@ -364,6 +442,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the center caption of the key.
+        /// </summary>
         public Color ColorCenterCenter
         {
             get
@@ -376,6 +457,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the right caption of the key.
+        /// </summary>
         public Color ColorCenterRight
         {
             get
@@ -388,6 +472,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the lower left caption of the key.
+        /// </summary>
         public string CaptionBottomLeft
         {
             get
@@ -400,6 +487,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the lower center caption of the key.
+        /// </summary>
         public string CaptionBottomCenter
         {
             get
@@ -412,6 +502,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the lower right caption of the key.
+        /// </summary>
         public string CaptionBottomRight
         {
             get
@@ -424,6 +517,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the lower left caption of the key.
+        /// </summary>
         public Color ColorBottomLeft
         {
             get
@@ -436,6 +532,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the lower center caption of the key.
+        /// </summary>
         public Color ColorBottomCenter
         {
             get
@@ -448,6 +547,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the lower right caption of the key.
+        /// </summary>
         public Color ColorBottomRight
         {
             get
@@ -460,6 +562,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the front left caption of the key.
+        /// </summary>
         public string CaptionFrontLeft
         {
             get
@@ -472,6 +577,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the front center caption of the key.
+        /// </summary>
         public string CaptionFrontCenter
         {
             get
@@ -484,6 +592,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the front right caption of the key.
+        /// </summary>
         public string CaptionFrontRight
         {
             get
@@ -496,6 +607,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the front left caption of the key.
+        /// </summary>
         public Color ColorFrontLeft
         {
             get
@@ -508,6 +622,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the front center caption of the key.
+        /// </summary>
         public Color ColorFrontCenter
         {
             get
@@ -520,6 +637,9 @@ namespace KeyboardLayoutGenerator
             }
         }
 
+        /// <summary>
+        /// Sets the color of the front right caption of the key.
+        /// </summary>
         public Color ColorFrontRight
         {
             get
