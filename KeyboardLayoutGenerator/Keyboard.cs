@@ -26,6 +26,18 @@ namespace KeyboardLayoutGenerator
         }
 
         /// <summary>
+        /// Creates a copy of the given Keyboard object
+        /// </summary>
+        /// <param name="keyboard">The keyboard to copy</param>
+        public Keyboard(Keyboard keyboard)
+        {
+            this._keys = new List<Key>(keyboard.GetKeys());
+            this._backgroundColor = keyboard.BackgroundColor;
+            this._title = keyboard.Title;
+            this._author = keyboard.Author;
+        }
+
+        /// <summary>
         /// Sets the background color of the keyboard.
         /// </summary>
         public Color BackgroundColor
