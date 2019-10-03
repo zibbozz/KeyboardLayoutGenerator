@@ -92,6 +92,56 @@ namespace KeyboardLayoutGenerator
         }
 
         /// <summary>
+        /// Creates a copy of the given key object.
+        /// </summary>
+        /// <param name="key">The key to copy</param>
+        public Key(Key key)
+        {
+            this._size = key.Size;
+            this._color = key.Color;
+            this._keyColor = key.KeyColor;
+            this._width =+ key.Width;
+            this._height = key.Height;
+            this._width2 = key.Width2;
+            this._height2 =key.Height2;
+            this._x = key.X;
+            this._y = key.Y;
+            this._x2 = key.X2;
+            this._y2 = key.Y2;
+
+            this._stepped = key.Stepped;
+            this._homing = key.Homing;
+
+            this._topLeft = key.CaptionTopLeft;
+            this._topCenter = key.CaptionTopCenter;
+            this._topRight = key.CaptionTopRight;
+            this._colorTopLeft = key.ColorTopLeft;
+            this._colorTopCenter = key.ColorTopCenter;
+            this._colorTopRight = key.ColorTopRight;
+
+            this._centerLeft = key.CaptionCenterLeft;
+            this._centerCenter = key.CaptionCenterCenter;
+            this._centerRight = key.CaptionCenterRight;
+            this._colorCenterLeft = key.ColorCenterLeft;
+            this._colorCenterCenter = key.ColorCenterCenter;
+            this._colorCenterRight = key.ColorCenterRight;
+
+            this._bottomLeft = key.CaptionBottomLeft;
+            this._bottomCenter = key.CaptionBottomCenter;
+            this._bottomRight = key.CaptionBottomRight;
+            this._colorBottomLeft = key.ColorBottomLeft;
+            this._colorBottomCenter = key.ColorBottomCenter;
+            this._colorBottomRight = key.ColorBottomRight;
+
+            this._frontLeft = key.CaptionFrontLeft;
+            this._frontCenter = key.CaptionFrontCenter;
+            this._frontRight = key.CaptionFrontRight;
+            this._colorFrontLeft = key.ColorFrontLeft;
+            this._colorFrontCenter = key.ColorFrontCenter;
+            this._colorFrontRight = key.ColorFrontRight;  
+        }
+
+        /// <summary>
         /// Sets the size of all captions.
         /// Minimum = 1.0
         /// Default = 3.0
