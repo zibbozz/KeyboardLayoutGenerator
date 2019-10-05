@@ -150,6 +150,11 @@ namespace KeyboardLayoutGenerator
             this.CaptionTopLeft = caption;
         }
 
+        /// <summary>
+        /// Creates a key object with a set upper left caption and a key color.
+        /// </summary>
+        /// <param name="caption">The caption of the key</param>
+        /// <param name="keyColor">The color of the key</param>
         public Key(string caption, Color keyColor) : this(caption)
         {
             this.KeyColor = keyColor;
