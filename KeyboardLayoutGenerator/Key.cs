@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Xml;
 
 namespace KeyboardLayoutGenerator
 {
@@ -719,6 +720,197 @@ namespace KeyboardLayoutGenerator
             {
                 this._colorFrontRight = value;
             }
+        }
+
+        /// <summary>
+        /// Saves the key object as a xml file.
+        /// </summary>
+        /// <param name="path">The path of the file</param>
+        /// <returns></returns>
+        public bool SaveXml(string path)
+        {
+            XmlDocument doc = new XmlDocument();
+            XmlElement root = doc.CreateElement("Key");
+
+            XmlElement size = doc.CreateElement("Size");
+            size.SetAttribute("Value", this.Size.ToString());
+            root.AppendChild(size);
+
+            XmlElement color = doc.CreateElement("Color");
+            color.SetAttribute("RValue", this.Color.R.ToString());
+            color.SetAttribute("GValue", this.Color.G.ToString());
+            color.SetAttribute("BValue", this.Color.B.ToString());
+            root.AppendChild(color);
+
+            XmlElement keyColor = doc.CreateElement("KeyColor");
+            keyColor.SetAttribute("RValue", this.KeyColor.R.ToString());
+            keyColor.SetAttribute("GValue", this.KeyColor.G.ToString());
+            keyColor.SetAttribute("BValue", this.KeyColor.B.ToString());
+            root.AppendChild(keyColor);
+
+            XmlElement width = doc.CreateElement("Width");
+            width.SetAttribute("Value", this.Width.ToString());
+            root.AppendChild(width);
+
+            XmlElement height = doc.CreateElement("Height");
+            height.SetAttribute("Value", this.Height.ToString());
+            root.AppendChild(height);
+
+            XmlElement width2 = doc.CreateElement("Width2");
+            width2.SetAttribute("Value", this.Width2.ToString());
+            root.AppendChild(width2);
+
+            XmlElement height2 = doc.CreateElement("Height2");
+            height2.SetAttribute("Value", this.Height2.ToString());
+            root.AppendChild(height2);
+
+            XmlElement x = doc.CreateElement("X");
+            x.SetAttribute("Value", this.X.ToString());
+            root.AppendChild(x);
+
+            XmlElement y = doc.CreateElement("Y");
+            y.SetAttribute("Value", this.Y.ToString());
+            root.AppendChild(y);
+
+            XmlElement x2 = doc.CreateElement("X2");
+            x2.SetAttribute("Value", this.X2.ToString());
+            root.AppendChild(x2);
+
+            XmlElement y2 = doc.CreateElement("Y2");
+            y2.SetAttribute("Value", this.Y2.ToString());
+            root.AppendChild(y2);
+
+            XmlElement stepped = doc.CreateElement("Stepped");
+            stepped.SetAttribute("Value", this.Stepped.ToString());
+            root.AppendChild(stepped);
+
+            XmlElement homing = doc.CreateElement("Homing");
+            homing.SetAttribute("Value", this.Homing.ToString());
+            root.AppendChild(homing);
+
+            XmlElement topLeft = doc.CreateElement("TopLeft");
+            topLeft.SetAttribute("Value", this.CaptionTopLeft);
+            root.AppendChild(topLeft);
+
+            XmlElement topCenter = doc.CreateElement("TopCenter");
+            topCenter.SetAttribute("Value", this.CaptionTopCenter);
+            root.AppendChild(topCenter);
+
+            XmlElement topRight = doc.CreateElement("TopRight");
+            topRight.SetAttribute("Value", this.CaptionTopRight);
+            root.AppendChild(topRight);
+
+            XmlElement colorTopLeft = doc.CreateElement("ColorTopLeft");
+            colorTopLeft.SetAttribute("RValue", this.ColorTopLeft.R.ToString());
+            colorTopLeft.SetAttribute("GValue", this.ColorTopLeft.G.ToString());
+            colorTopLeft.SetAttribute("BValue", this.ColorTopLeft.B.ToString());
+            root.AppendChild(colorTopLeft);
+
+            XmlElement colorTopCenter = doc.CreateElement("ColorTopCenter");
+            colorTopCenter.SetAttribute("RValue", this.ColorTopCenter.R.ToString());
+            colorTopCenter.SetAttribute("GValue", this.ColorTopCenter.G.ToString());
+            colorTopCenter.SetAttribute("BValue", this.ColorTopCenter.B.ToString());
+            root.AppendChild(colorTopCenter);
+
+            XmlElement colorTopRight = doc.CreateElement("ColorTopRight");
+            colorTopRight.SetAttribute("RValue", this.ColorTopRight.R.ToString());
+            colorTopRight.SetAttribute("GValue", this.ColorTopRight.G.ToString());
+            colorTopRight.SetAttribute("BValue", this.ColorTopRight.B.ToString());
+            root.AppendChild(colorTopRight);
+
+            XmlElement centerLeft = doc.CreateElement("CenterLeft");
+            centerLeft.SetAttribute("Value", this.CaptionCenterLeft);
+            root.AppendChild(centerLeft);
+
+            XmlElement centerCenter = doc.CreateElement("CenterCenter");
+            centerCenter.SetAttribute("Value", this.CaptionCenterCenter);
+            root.AppendChild(centerCenter);
+
+            XmlElement centerRight = doc.CreateElement("CenterRight");
+            centerRight.SetAttribute("Value", this.CaptionCenterRight);
+            root.AppendChild(centerRight);
+
+            XmlElement colorCenterLeft = doc.CreateElement("ColorCenterLeft");
+            colorCenterLeft.SetAttribute("RValue", this.ColorCenterLeft.R.ToString());
+            colorCenterLeft.SetAttribute("GValue", this.ColorCenterLeft.G.ToString());
+            colorCenterLeft.SetAttribute("BValue", this.ColorCenterLeft.B.ToString());
+            root.AppendChild(colorCenterLeft);
+
+            XmlElement colorCenterCenter = doc.CreateElement("ColorCenterCenter");
+            colorCenterCenter.SetAttribute("RValue", this.ColorCenterCenter.R.ToString());
+            colorCenterCenter.SetAttribute("GValue", this.ColorCenterCenter.G.ToString());
+            colorCenterCenter.SetAttribute("BValue", this.ColorCenterCenter.B.ToString());
+            root.AppendChild(colorCenterCenter);
+
+            XmlElement colorCenterRight = doc.CreateElement("ColorCenterRight");
+            colorCenterRight.SetAttribute("RValue", this.ColorCenterRight.R.ToString());
+            colorCenterRight.SetAttribute("GValue", this.ColorCenterRight.G.ToString());
+            colorCenterRight.SetAttribute("BValue", this.ColorCenterRight.B.ToString());
+            root.AppendChild(colorCenterRight);
+
+            XmlElement bottomLeft = doc.CreateElement("BottomLeft");
+            bottomLeft.SetAttribute("Value", this.CaptionBottomLeft);
+            root.AppendChild(bottomLeft);
+
+            XmlElement bottomCenter = doc.CreateElement("BottomCenter");
+            bottomCenter.SetAttribute("Value", this.CaptionBottomCenter);
+            root.AppendChild(bottomCenter);
+
+            XmlElement bottomRight = doc.CreateElement("BottomRight");
+            bottomRight.SetAttribute("Value", this.CaptionBottomRight);
+            root.AppendChild(bottomRight);
+
+            XmlElement colorBottomLeft = doc.CreateElement("ColorBottomLeft");
+            colorBottomLeft.SetAttribute("RValue", this.ColorBottomLeft.R.ToString());
+            colorBottomLeft.SetAttribute("GValue", this.ColorBottomLeft.G.ToString());
+            colorBottomLeft.SetAttribute("BValue", this.ColorBottomLeft.B.ToString());
+            root.AppendChild(colorBottomLeft);
+
+            XmlElement colorBottomCenter = doc.CreateElement("ColorBottomCenter");
+            colorBottomCenter.SetAttribute("RValue", this.ColorBottomCenter.R.ToString());
+            colorBottomCenter.SetAttribute("GValue", this.ColorBottomCenter.G.ToString());
+            colorBottomCenter.SetAttribute("BValue", this.ColorBottomCenter.B.ToString());
+            root.AppendChild(colorBottomCenter);
+
+            XmlElement colorBottomRight = doc.CreateElement("ColorBottomRight");
+            colorBottomRight.SetAttribute("RValue", this.ColorBottomRight.R.ToString());
+            colorBottomRight.SetAttribute("GValue", this.ColorBottomRight.G.ToString());
+            colorBottomRight.SetAttribute("BValue", this.ColorBottomRight.B.ToString());
+            root.AppendChild(colorBottomRight);
+
+            XmlElement frontLeft = doc.CreateElement("FrontLeft");
+            frontLeft.SetAttribute("Value", this.CaptionFrontLeft);
+            root.AppendChild(frontLeft);
+
+            XmlElement frontCenter = doc.CreateElement("FrontCenter");
+            frontCenter.SetAttribute("Value", this.CaptionFrontCenter);
+            root.AppendChild(frontCenter);
+
+            XmlElement frontRight = doc.CreateElement("FrontRight");
+            frontRight.SetAttribute("Value", this.CaptionFrontRight);
+            root.AppendChild(frontRight);
+
+            XmlElement colorFrontLeft = doc.CreateElement("ColorFrontLeft");
+            colorFrontLeft.SetAttribute("RValue", this.ColorFrontLeft.R.ToString());
+            colorFrontLeft.SetAttribute("GValue", this.ColorFrontLeft.G.ToString());
+            colorFrontLeft.SetAttribute("BValue", this.ColorFrontLeft.B.ToString());
+            root.AppendChild(colorFrontLeft);
+
+            XmlElement colorFrontCenter = doc.CreateElement("ColorFrontCenter");
+            colorFrontCenter.SetAttribute("RValue", this.ColorFrontCenter.R.ToString());
+            colorFrontCenter.SetAttribute("GValue", this.ColorFrontCenter.G.ToString());
+            colorFrontCenter.SetAttribute("BValue", this.ColorFrontCenter.B.ToString());
+            root.AppendChild(colorFrontCenter);
+
+            XmlElement colorFrontRight = doc.CreateElement("ColorFrontRight");
+            colorFrontRight.SetAttribute("RValue", this.ColorFrontRight.R.ToString());
+            colorFrontRight.SetAttribute("GValue", this.ColorFrontRight.G.ToString());
+            colorFrontRight.SetAttribute("BValue", this.ColorFrontRight.B.ToString());
+            root.AppendChild(colorFrontRight);
+
+            doc.AppendChild(root);
+            doc.Save(path);
+            return true;
         }
     }
 }
